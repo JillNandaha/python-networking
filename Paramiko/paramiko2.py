@@ -1,4 +1,4 @@
-import paramiko
+import Paramiko.paramiko as paramiko
 import time
 
 #create ssh client

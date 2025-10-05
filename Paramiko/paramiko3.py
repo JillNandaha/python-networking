@@ -1,5 +1,5 @@
 #CREATING LOOPBACK INTERFACES
-import paramiko
+import Paramiko.paramiko as paramiko
 import time
 
 #create SSH client 
@@ -43,7 +43,7 @@ client.close()
 
 
 #CONNECTING TO MULTIPLE DEVICES WITH A LIST
-import paramiko
+import Paramiko.paramiko as paramiko
 import time 
 
 username = 'admin'

@@ -1,4 +1,4 @@
-import paramiko
+import Paramiko.paramiko as paramiko
 
 hostname = '192.168.0.1'
 username = 'admin'
@@ -35,7 +35,7 @@ finally:
 #using paramiko to establish a secure ssh connection to networking devices
 #first create a client object, then specify parameters such as hostname,port, authentication credentials then initiate connection
 
-import paramiko
+import Paramiko.paramiko as paramiko
 import time
 
 #create  SSH client
@@ -78,7 +78,7 @@ client.close()
 
 
 #HANDLING EXCEPTIONS
-import paramiko
+import Paramiko.paramiko as paramiko
 import time
 
 

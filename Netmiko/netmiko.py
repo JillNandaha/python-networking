@@ -1,4 +1,4 @@
-from netmiko import ConnectHandler
+from Netmiko.netmiko import ConnectHandler
 connection = ConnectHandler(
     host = '192.178.3.50',
     username = 'admin',
@@ -12,7 +12,7 @@ connection.disconnect()
 
 
 #DEVICE CONFIGURATION
-from netmiko import ConnectHandler
+from Netmiko.netmiko import ConnectHandler
 import getpass
 
 #getpass allows us to prompt user for the  password
@@ -45,7 +45,7 @@ print(show_output)
 connection.disconnect()
 
 #SENDING MULTIPLE COMMANDS
-from netmiko import ConnectHandler
+from Netmiko.netmiko import ConnectHandler
 import getpass
 
 passwd = getpass.getpass('Please enter the password: ')
@@ -73,7 +73,7 @@ print(connection.send_command('show access-lists'))
 connection.disconnect()
 
 #CONNECTING TO MULTIPLE DEVICES
-from netmiko import ConnectHandler
+from Netmiko.netmiko import ConnectHandler
 import getpass
 import json
 
@@ -99,7 +99,7 @@ for ip in ip_list:
 json_formatted = json.dumps(device_list, indent=4)
 print(json_formatted)
 
-#iterate over eac device and connect to it
+#iterate over each device and connect to it
 for each_device in device_list:
     connection = ConnectHandler(**each_device)
     connection.enable()

@@ -1,5 +1,5 @@
 #SEND CONFIG COMMANDS TO MULTIPLE DEVICES
-from netmiko import ConnectHandler
+from Netmiko.netmiko import ConnectHandler
 
 #define device details for cisco devices
 devices = [
@@ -38,7 +38,7 @@ for device in devices:
 
 
 #CONFIG CHANGES FROM A FILE
-from netmiko import ConnectHandler
+from Netmiko.netmiko import ConnectHandler
 
 # Define device details for a Cisco device
 device = {
@@ -60,7 +60,7 @@ print(output)
 
 
 #BACKUP DEVICE CONFIG
-from netmiko import ConnectHandler
+from Netmiko.netmiko import ConnectHandler
 from datetime import datetime
 
 # Define device details for Cisco devices

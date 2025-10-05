@@ -1,5 +1,5 @@
 #CONFIGURING INTERFACE DESCRIPTION
-import napalm
+import Napalm.napalm as napalm
 
 #Create napalm driver
 driver = napalm.get_network_driver('ios')
@@ -19,7 +19,7 @@ device.commit_config()
 device.close()
 
 #MANAGING NETWORK CONFIGS
-import napalm
+import Napalm.napalm as napalm
 
 driver = napalm.get_network_driver('ios')
 

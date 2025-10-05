@@ -1,4 +1,4 @@
-import napalm
+import Napalm.napalm as napalm
 
 #Create a NAPALM driver for cisco ios
 driver = napalm.get_network_driver('cisco')
@@ -12,7 +12,7 @@ device.close()
 
 
 #RETEREIVING DEVICE INFORMATION AND CONFIG DATA
-import napalm
+import Napalm.napalm as napalm
 import json
 
 #Create a napalm driver
