@@ -1,0 +1,21 @@
+import getpass
+import telnet
+
+host = "192.168.2.1"
+user = input("Enter username:")
+password = getpass.getpass()
+
+#initiate a connection
+tn = telnet.telnet(host)
+
+tn.read_until(b"username:")
+tn.write(user.encode("ascii") + b"\n")
+
+if password:
+    tn.read_until(b"password: ")
+    tn.write(password.encode("ascii") + b"\n")
+
+tn.write(b"sh ip int br\n")
+tn.write(b"exit\n")
+
+print(tn.read_all().decode("ascii"))

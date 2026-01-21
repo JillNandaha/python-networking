@@ -1,0 +1,14 @@
+import telnet
+
+ip = "192.168.2.1"
+cmd = input("Enter command:")
+tn = telnet(ip)
+
+tn.write(b"admin\n")
+tn.write(b"admin\n")
+tn.write(cmd.encode("ascii") + b"\n")
+tn.write(b"exit\n")
+
+print(tn.read_all().decode("ascii"))
+
+

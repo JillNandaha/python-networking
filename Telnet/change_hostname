@@ -1,0 +1,26 @@
+import getpass
+import telnet
+
+IP = "192.168.1.100"
+
+user = input("Enter your username: ")
+password = getpass.getpass()
+
+tn = telnet.telnet(IP)
+
+tn.read_until(b"Username: ")
+tn.write(user.encode("ascii") + b"\n")
+if password:
+    tn.read_until(b"Password: ")
+    tn.write(password.encode("ascii") + b"\n")
+
+
+tn.write(b"enable\n")
+tn.write(b"cisco\n")
+tn.write(b"conf t\n")
+tn.write(b"hostname SRV1\n")
+tn.write(b"end\n")
+tn.write(b"write memory\n")
+tn.write(b"exit\n")
+
+print(tn.read_all().decode("ascii"))
